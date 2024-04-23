@@ -1,6 +1,6 @@
-`
+```
 git clone https://github.com/tryhard02/unix 
-`
+```
 
 # AWK Scripting
 ## Squares of Number from 1 to nth (Replace n)
