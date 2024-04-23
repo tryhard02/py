@@ -1,3 +1,10 @@
+# Update Sudo and Install Git
+```
+sudo apt update
+```
+```
+sudo apt install git
+```
 ```
 git clone https://github.com/tryhard02/unix 
 ```
