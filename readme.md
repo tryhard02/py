@@ -59,22 +59,25 @@ sed 's/[^[:alpha:]]/\n/g' word.txt | sed '/^$/d' | tr '[:upper:]' '[:lower:]' | 
 ## Calculate the power
 
 ```
-use strict;
-use warnings;
+sub power {
+    my ($x, $y) = @_;
 
-sub calculate*power{
-my($base,$exponent) = @*;
-return $base \*\* $exponent;
+    my $result = $x ** $y;
+
+    return $result;
 }
 
-print "Enter the base number" ;
-my $base = <STDIN>;
-chomp($base);
+# Prompting user for input
+print "Enter the value of x: ";
+my $x = <STDIN>; # Getting input for x
+chomp($x); # Removing newline character
 
-print "Enter the exponent number" ;
-my $exponent = <STDIN>;
-chomp($exponent);
+print "Enter the value of y: ";
+my $y = <STDIN>; # Getting input for y
+chomp($y); # Removing newline character
 
-my $result = calculate_power($base,$exponent);
-print "Result : $result\n";
+# Calculating and displaying the result
+my $result = power($x, $y);
+print "Result: $result\n";
+
 ```
