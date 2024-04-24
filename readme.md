@@ -58,6 +58,7 @@ sed 's/[^[:alpha:]]/\n/g' word.txt | sed '/^$/d' | tr '[:upper:]' '[:lower:]' | 
 
 ## Calculate the power
 
+```
 use strict;
 use warnings;
 
@@ -76,3 +77,4 @@ chomp($exponent);
 
 my $result = calculate_power($base,$exponent);
 print "Result : $result\n";
+```
