@@ -1,24 +1,33 @@
 # Update Sudo and Install Git
+
 ```
 sudo apt update
 ```
+
 ```
 sudo apt install git
 ```
+
 ```
-git clone https://github.com/tryhard02/unix 
+git clone https://github.com/tryhard02/unix
 ```
 
 # AWK Scripting
+
 ## Squares of Number from 1 to nth (Replace n)
-``` 
+
+```
 awk 'BEGIN { for(i=1;i<=n;i++) print " Square of" ,i," is ", i*i;}'
 ```
+
 ## Displaying the Sum of Numbers in data.txt (Requires data.txt)
-``` 
+
+```
 awk '{sum += $1} END {print sum}' data.txt
 ```
+
 ## Fibonacci Series
+
 ```
 awk 'BEGIN {
 x=0
@@ -38,8 +47,32 @@ print z
 }
 }'
 ```
+
 # SED Scripting
+
 ## Count of every word in a sentence (Requires word.txt)
-``` 
+
+```
 sed 's/[^[:alpha:]]/\n/g' word.txt | sed '/^$/d' | tr '[:upper:]' '[:lower:]' | sort | uniq -c
 ```
+
+## Calculate the power
+
+use strict;
+use warnings;
+
+sub calculate*power{
+my($base,$exponent) = @*;
+return $base \*\* $exponent;
+}
+
+print "Enter the base number" ;
+my $base = <STDIN>;
+chomp($base);
+
+print "Enter the exponent number" ;
+my $exponent = <STDIN>;
+chomp($exponent);
+
+my $result = calculate_power($base,$exponent);
+print "Result : $result\n";
